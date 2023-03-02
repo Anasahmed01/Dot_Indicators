@@ -1,4 +1,4 @@
-import 'package:dotindicator/dot_indicator.dart';
+import 'package:dotindicator/views/dot_indicator.dart';
 import 'package:flutter/material.dart';
 
 void main() {
