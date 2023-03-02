@@ -3,6 +3,7 @@ import 'package:dotindicator/views/fourth_page_view.dart';
 import 'package:dotindicator/views/second_page_view.dart';
 import 'package:dotindicator/views/third_page_view.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class DotIndicatorView extends StatefulWidget {
   const DotIndicatorView({super.key});
@@ -17,7 +18,9 @@ class _DotIndicatorViewState extends State<DotIndicatorView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple[200],
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           SizedBox(
             height: 500,
@@ -30,7 +33,18 @@ class _DotIndicatorViewState extends State<DotIndicatorView> {
                 FourthView(),
               ],
             ),
-          )
+          ),
+          SmoothPageIndicator(
+            controller: controller,
+            count: 4,
+            effect: const JumpingDotEffect(
+                dotColor: Colors.black,
+                activeDotColor: Colors.deepPurple,
+                dotWidth: 30,
+                dotHeight: 30,
+                spacing: 16,
+                verticalOffset: 30),
+          ),
         ],
       ),
     );
