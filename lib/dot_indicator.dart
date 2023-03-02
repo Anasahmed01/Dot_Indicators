@@ -1,3 +1,7 @@
+import 'package:dotindicator/views/first_page_view.dart';
+import 'package:dotindicator/views/fourth_page_view.dart';
+import 'package:dotindicator/views/second_page_view.dart';
+import 'package:dotindicator/views/third_page_view.dart';
 import 'package:flutter/material.dart';
 
 class DotIndicatorView extends StatefulWidget {
@@ -19,6 +23,12 @@ class _DotIndicatorViewState extends State<DotIndicatorView> {
             height: 500,
             child: PageView(
               controller: controller,
+              children: const [
+                FirstView(),
+                SecondView(),
+                ThirdView(),
+                FourthView(),
+              ],
             ),
           )
         ],

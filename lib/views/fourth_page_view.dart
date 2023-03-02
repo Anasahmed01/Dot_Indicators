@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SecondView extends StatelessWidget {
-  const SecondView({super.key});
+class FourthView extends StatelessWidget {
+  const FourthView({super.key});
 
   @override
   Widget build(BuildContext context) {
